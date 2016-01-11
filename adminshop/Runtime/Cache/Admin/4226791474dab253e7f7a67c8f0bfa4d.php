@@ -29,55 +29,22 @@
             </p>
         </div>
         <div id="tabbody-div">
-            <form enctype="multipart/form-data" name="supplierForm" action="<?php echo U('addEdit');?>" method="POST">
+            <form name="giiForm" action="<?php echo U();?>" method="POST">
                 <table width="90%" id="general-table" align="center">
 
                     <tr>
-                        <td class="label">品牌名称：</td>
+                        <td class="label">表名：</td>
                         <td>
                             <input type="text" name="NAME" value="<?php echo ($name); ?>"/>
                             <span class="require-field">*</span>
                         </td>
                     </tr>
-                    <tr>
-                        <td class="label">品牌网址：</td>
-                        <td>
-                            <input type="text" name="url" value="<?php echo ($url); ?>"/>
-                            <span class="require-field">*</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="label">LOGO：</td>
-                        <td>
-                            <input type="file" name="logo" value="<?php echo ($logo); ?>"/>
-                            <span class="require-field">*</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="label">排序：</td>
-                        <td>
-                            <input type="text" name="sort" value="<?php echo ((isset($sort) && ($sort !== ""))?($sort):20); ?>"/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="label">是否显示：</td>
-                        <td>
-                            <input type="radio" class="status" name="STATUS" value="1"/>是
-                            <input type="radio" class="status" name="STATUS" value="0"/>否
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="label">品牌简介：</td>
-                        <td>
-                            <textarea name="intro" cols="40" rows="3"><?php echo ($intro); ?></textarea>
-                        </td>
-                    </tr>
                 </table>
                 <div class="button-div">
-                    <input type="submit" value=" 确定 " class="button ajax_post"/>
+                    <input type="submit" value=" 确定 " class="button"/>
                     <input type="reset" value=" 重置 " class="button" />
                 </div>
-                <input type="hidden" name="id" value="<?php echo ($id); ?>"/>
+
             </form>
         </div>
     </div>

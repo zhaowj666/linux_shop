@@ -30,10 +30,11 @@
     </form>
 </div>
 
+
 <div class="list-div" id="listDiv">
-    <input type="button"  url="<?php echo U('changeStatus');?>" class=" removes button" value="删除"/>
-    <input type="button"  url="<?php echo U('changeStatus',array('status'=>1));?>" class="button showes" value="显示"/>
-    <input type="button"  url="<?php echo U('changeStatus',array('status'=>0));?>" class="button hiddens" value="隐藏"/>
+    <input type="button"  url="<?php echo U('changeStatus');?>" class="ajax_post button" value="删除"/>
+    <input type="button"  url="<?php echo U('changeStatus',array('status'=>1));?>" class="ajax_post button" value="显示"/>
+    <input type="button"  url="<?php echo U('changeStatus',array('status'=>0));?>" class="ajax_post button" value="隐藏"/>
     
     <table cellpadding="3" cellspacing="1">
         <tr>

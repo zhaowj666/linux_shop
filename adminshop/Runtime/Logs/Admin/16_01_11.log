@@ -348,3 +348,58 @@ INFO: [ app_begin ] --END-- [ RunTime:0.000700s ]
 SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0006s ]
 ERR: 参数错误或者未定义:id
 
+[ 2016-01-11T21:28:55+08:00 ] 192.168.1.101 /index.php/Gii/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000473s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000819s ]
+SQL: select  TABLE_COMMENT from information_schema.`TABLES`  where TABLE_SCHEMA = 'shop' and TABLE_NAME = 'brand' [ RunTime:0.3116s ]
+
+[ 2016-01-11T21:29:05+08:00 ] 192.168.1.101 /index.php/Gii/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000737s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001126s ]
+SQL: select  TABLE_COMMENT from information_schema.`TABLES`  where TABLE_SCHEMA = 'shop' and TABLE_NAME = 'brand' [ RunTime:0.0003s ]
+
+[ 2016-01-11T21:29:33+08:00 ] 192.168.1.101 /index.php/Gii/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000444s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001089s ]
+SQL: select  TABLE_COMMENT from information_schema.`TABLES`  where TABLE_SCHEMA = 'shop' and TABLE_NAME = 'brand' [ RunTime:0.0003s ]
+
+[ 2016-01-11T22:26:20+08:00 ] 192.168.1.101 /index.php/Brand/changeStatus/id/4/status/0.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000445s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000753s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0007s ]
+SQL: UPDATE `brand` SET `STATUS`='0' WHERE `id` IN ('4') [ RunTime:0.0003s ]
+
+[ 2016-01-11T23:15:05+08:00 ] 192.168.1.101 /index.php/Brand/addEdit.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000405s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000683s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0005s ]
+
+[ 2016-01-11T23:15:08+08:00 ] 192.168.1.101 /index.php/Brand/addEdit.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000425s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000695s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0007s ]
+
+[ 2016-01-11T23:15:09+08:00 ] 192.168.1.101 /index.php/Brand/addEdit.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000422s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000771s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0007s ]
+
+[ 2016-01-11T23:15:11+08:00 ] 192.168.1.101 /index.php/Brand/addEdit.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000418s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000690s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0007s ]
+
+[ 2016-01-11T23:15:13+08:00 ] 192.168.1.101 /index.php/Brand/addEdit.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000790s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001181s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0005s ]
+

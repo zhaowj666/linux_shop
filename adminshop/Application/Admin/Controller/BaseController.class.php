@@ -11,7 +11,7 @@ namespace Admin\Controller;
 
 use Think\Controller;
 
-class BaseCtroller extends Controller
+class BaseController extends Controller
 {
     protected $model;
     //

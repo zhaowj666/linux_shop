@@ -11,7 +11,7 @@ namespace Admin\Controller;
 
 use Think\Controller;
 
-class SupplierController extends  BaseCtroller
+class SupplierController extends  BaseController
 {
     protected $meta_title = '供应商';
 
