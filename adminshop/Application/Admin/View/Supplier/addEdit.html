@@ -1,0 +1,63 @@
+<extend  name="Commen/addEdit"/>
+<block name="form">
+    <div class="tab-div">
+        <div id="tabbar-div">
+            <p>
+                <span class="tab-front" id="general-tab">通用信息</span>
+            </p>
+        </div>
+        <div id="tabbody-div">
+            <form enctype="multipart/form-data" name="supplierForm" action="{:U('addEdit')}" method="POST">
+                <table width="90%" id="general-table" align="center">
+
+                    <tr>
+                        <td class="label">供应商名称：</td>
+                        <td>
+                            <input type="text" name="NAME" value="{$name}"/>
+                            <span class="require-field">*</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label">联系人：</td>
+                        <td>
+                            <input type="text" name="linkman" value="{$linkman}"/>
+                            <span class="require-field">*</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label">联系电话：</td>
+                        <td>
+                            <input type="text" name="phonenumber" value="{$phonenumber}"/>
+                            <span class="require-field">*</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label">排序：</td>
+                        <td>
+                            <input type="text" name="sort" value="{$sort|default=20}"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label">是否显示：</td>
+                        <td>
+                            <input type="radio" class="status" name="STATUS" value="1"/>是
+                            <input type="radio" class="status" name="STATUS" value="0"/>否
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label">供应商简介：</td>
+                        <td>
+                            <textarea name="intro" cols="40" rows="3">{$intro}</textarea>
+                        </td>
+                    </tr>
+                </table>
+                <div class="button-div">
+                    <input type="submit" value=" 确定 " class="button ajax_post"/>
+                    <input type="reset" value=" 重置 " class="button" />
+                </div>
+                <input type="hidden" name="id" value="{$id}"/>
+            </form>
+        </div>
+    </div>
+</block>
+
