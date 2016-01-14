@@ -1,0 +1,87 @@
+[ 2016-01-13T01:25:43+08:00 ] 192.168.1.101 /index.php/brand/
+ERR: 非法操作:index.php
+
+[ 2016-01-13T01:27:52+08:00 ] 192.168.1.101 /Public/Admin/uploadify/common.css
+ERR: 无法加载控制器:404
+
+[ 2016-01-13T01:27:52+08:00 ] 192.168.1.101 /index.php/brand/
+ERR: 非法操作:index.php
+
+[ 2016-01-13T01:27:54+08:00 ] 192.168.1.101 /Public/Admin/uploadify/common.css
+ERR: 无法加载控制器:404
+
+[ 2016-01-13T01:27:55+08:00 ] 192.168.1.101 /index.php/brand/
+ERR: 非法操作:index.php
+
+[ 2016-01-13T01:28:11+08:00 ] 192.168.1.101 /Public/Admin/uploadify/common.css
+ERR: 无法加载控制器:404
+
+[ 2016-01-13T01:28:43+08:00 ] 192.168.1.101 /index.php/brand/
+ERR: 非法操作:index.php
+
+[ 2016-01-13T01:28:58+08:00 ] 192.168.1.101 /index.php/brand/
+ERR: 非法操作:index.php
+
+[ 2016-01-13T01:29:07+08:00 ] 192.168.1.101 /index.php/brand/
+ERR: 非法操作:index.php
+
+[ 2016-01-13T01:29:13+08:00 ] 192.168.1.101 /index.php/brand/
+ERR: 非法操作:index.php
+
+[ 2016-01-13T08:54:19+08:00 ] 192.168.3.41 /index.php/Brand/
+ERR: 非法操作:index.php
+
+[ 2016-01-13T08:58:47+08:00 ] 192.168.3.41 /index.php/Brand/
+ERR: 非法操作:index.php
+
+[ 2016-01-13T11:13:00+08:00 ] 192.168.3.41 /index.php/Gii/addEdit.html
+ERR: 非法操作:addEdit
+
+[ 2016-01-13T13:05:53+08:00 ] 192.168.3.41 /index.php/Brand/
+ERR: 非法操作:index.php
+
+[ 2016-01-13T13:06:07+08:00 ] 192.168.3.41 /index.php/Brand/__BRAND__%3C!DOCTYPE%20html%20PUBLIC%20%22-//W3C//DTD%20XHTML%201.0%20Transitional//EN%22%20%22http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd%22%3E%3Chtml%20xmlns=%22http://www.w3.org/1999/xhtml%22%3E%3Chead%3E%3Cmeta%20http-equiv=%22Content-Type%22%20content=%22text/html;%20charset=utf-8%22%20/%3E%3Ctitle%3E%E8%B7%B3%E8%BD%AC%E6%8F%90%E7%A4%BA%3C/title%3E%3Cstyle%20type=%22text/css%22%3E*%7B%20padding:%200;%20margin:%200;%20%7Dbody%7B%20background:%20
+ERR: 非法操作:__BRAND__
+
+[ 2016-01-13T14:56:31+08:00 ] 192.168.3.41 /index.php/Gii/addEdit.html
+ERR: 非法操作:addEdit
+
+[ 2016-01-13T14:57:42+08:00 ] 192.168.3.41 /index.php/goodscategory/index.html
+ERR: 无法加载控制器:Goodscategory
+
+[ 2016-01-13T14:57:48+08:00 ] 192.168.3.41 /index.php/goods_category/index.html
+ERR: 模板不存在:/home/www/shop/adminshop/Application/Admin/View/Goods_category/index.html
+
+[ 2016-01-13T14:59:14+08:00 ] 192.168.3.41 /index.php/goods_category/index.html
+ERR: 模板不存在:/home/www/shop/adminshop/Application/Admin/View/Goods_category/index.html
+
+[ 2016-01-13T14:59:15+08:00 ] 192.168.3.41 /index.php/goodscategory/index.html
+ERR: 无法加载控制器:Goodscategory
+
+[ 2016-01-13T16:01:40+08:00 ] 192.168.3.41 /index.php/Brand/
+ERR: 非法操作:index.php
+
+[ 2016-01-13T17:45:04+08:00 ] 192.168.3.41 /index.php/Brand/
+ERR: 非法操作:index.php
+
+[ 2016-01-13T19:08:35+08:00 ] 192.168.3.41 /index.php/GoodsCategory/changeStatus/id/2/status/0.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000453s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000790s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0007s ]
+SQL: UPDATE `goods_category` SET `status`='0' WHERE `id` IN ('2') [ RunTime:0.0547s ]
+
+[ 2016-01-13T19:08:39+08:00 ] 192.168.3.41 /index.php/GoodsCategory/changeStatus/id/10/status/0.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000610s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001015s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0007s ]
+SQL: UPDATE `goods_category` SET `status`='0' WHERE `id` IN ('10') [ RunTime:0.0002s ]
+
+[ 2016-01-13T19:09:13+08:00 ] 192.168.3.41 /index.php/GoodsCategory/changeStatus/id/3/status/0.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000449s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000714s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0006s ]
+SQL: UPDATE `goods_category` SET `status`='0' WHERE `id` IN ('3') [ RunTime:0.0004s ]
+

@@ -1,0 +1,47 @@
+<extend name="Commen/index"/>
+
+<block name="list_manager"></block>
+<block name="css">
+    <link href="__TREEGRID__css/jquery.treegrid.css" rel="stylesheet" type="text/css" />
+</block>
+
+
+<block name="list">
+    <table cellpadding="3" cellspacing="1" class="tree">
+        <tr>
+            <th>分类名称</th>
+            <th>分类简介</th>
+            <th>是否显示</th>
+            <th>操作</th>
+        </tr>
+        <volist name="rows" id="row">
+            <tr align="center" class="treegrid-{$row.id} <neq name='row.level' value='1'>treegrid-parent-{$row.parent_id}</neq>">
+            <td align="left" class='first-cell'>{$row.name}</td>
+                <td>{$row.intro}</td>
+                <td><a class="ajax_get"
+                       href="{:U('changeStatus',array('id'=>$row['id'],'status'=>(1-$row['status'])))}"><img
+                        src="__IMG__{$row.status}.gif"/></a></td>
+                <td>
+                    <a href="{:U('addEdit',array('id'=>$row['id']))}" title="编辑">编辑</a> |
+                    <a class="ajax_get" href="{:U('changeStatus',array('id'=>$row['id']))}" title="移除">移除</a>
+                </td>
+            </tr>
+        </volist>
+    </table>
+</block>
+
+
+<block name="js">
+    <script type="text/javascript" src="__TREEGRID__js/jquery.treegrid.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            //找到表格将表格变成一个树状结构
+            $('.tree').treegrid();
+        });
+    </script>
+</block>
+
+
+
+
+

@@ -31,43 +31,47 @@
 </div>
 
 
-<div class="list-div" id="listDiv">
+<div class="list-div">
     <input type="button"  url="<?php echo U('changeStatus');?>" class="ajax_post button" value="删除"/>
     <input type="button"  url="<?php echo U('changeStatus',array('status'=>1));?>" class="ajax_post button" value="显示"/>
     <input type="button"  url="<?php echo U('changeStatus',array('status'=>0));?>" class="ajax_post button" value="隐藏"/>
+
+</div>
+
+
+<div class="list-div" id="listDiv">
     
     <table cellpadding="3" cellspacing="1">
         <tr>
             <th>ID<input type="checkbox" class="selectAll" /></th>
             <th>供应商名称</th>
-            <th>联系人</th>
-            <th>联系电话</th>
-            <th>供应商描述</th>
-            <th>排序</th>
-            <th>是否显示</th>
+<th>联系人</th>
+<th>联系电话</th>
+<th>排序</th>
+<th>供应商简介</th>
+<th>是否显示</th>
             <th>操作</th>
         </tr>
         <?php if(is_array($rows)): $i = 0; $__LIST__ = $rows;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$row): $mod = ($i % 2 );++$i;?><tr align="center">
-                <td><?php echo ($row["id"]); ?><input type="checkbox" name="id[]" class="ids" value="<?php echo ($row["id"]); ?>"/></td>
-                <td class="first-cell"><?php echo ($row["name"]); ?></td>
-                <td><?php echo ($row["linkman"]); ?></td>
-                <td><?php echo ($row["phonenumber"]); ?></td>
-                <td><?php echo ($row["intro"]); ?></td>
-                <td><?php echo ($row["sort"]); ?></td>
-                <td><a class="ajax_get" href="<?php echo U('changeStatus',array('id'=>$row['id'],'status'=>1-$row['status']));?>"><img src="http://www.adminshop.com/Public/Admin/images/<?php echo ($row["status"]); ?>.gif"/></a></td>
                 <td>
+                    <?php echo ($row["id"]); ?><input type="checkbox" name="id[]" class="ids" value="<?php echo ($row["id"]); ?>"/>
+                </td>
+                <td class='first-cell'><?php echo ($row["name"]); ?></td><td><?php echo ($row["linkman"]); ?></td>
+<td><?php echo ($row["phonenumber"]); ?></td>
+<td><?php echo ($row["sort"]); ?></td>
+<td><?php echo ($row["intro"]); ?></td>
+<td><a class="ajax_get"   href="<?php echo U('changeStatus',array('id'=>$row['id'],'status'=>(1-$row['status'])));?>"><img src="http://www.adminshop.com/Public/Admin/images/<?php echo ($row["status"]); ?>.gif"/></a></td>                <td>
                     <a href="<?php echo U('addEdit',array('id'=>$row['id']));?>" title="编辑">编辑</a> |
                     <a class="ajax_get" href="<?php echo U('changeStatus',array('id'=>$row['id']));?>" title="移除">移除</a>
                 </td>
             </tr><?php endforeach; endif; else: echo "" ;endif; ?>
     </table>
 
-    <div id="turn-page" class="page">
-        <?php echo ($pageshow); ?>
-    </div>
 </div>
 
-
+<div id="turn-page" class="page">
+    <?php echo ($pageshow); ?>
+</div>
 <div id="footer">
     共执行 3 个查询，用时 0.021251 秒，Gzip 已禁用，内存占用 2.194 MB<br />
     版权所有 &copy; 2005-2012 上海商派网络科技有限公司，并保留所有权利。

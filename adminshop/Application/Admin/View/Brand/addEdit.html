@@ -13,7 +13,7 @@
                     <tr>
                         <td class="label">品牌名称：</td>
                         <td>
-                            <input type="text" name="NAME" value="{$name}"/>
+                            <input type="text" name="name" value="{$name}"/>
                             <span class="require-field">*</span>
                         </td>
                     </tr>
@@ -27,9 +27,16 @@
                     <tr>
                         <td class="label">LOGO：</td>
                         <td>
-                            <input type="file" name="logo" value="{$logo}"/>
-                            <span class="require-field">*</span>
+                            <input type="file" id="logo_uploader" name="logo_uploader" value="{$logo}"/>
+                            <input type='hidden' class="logo" name='logo'/>
+                            <!-- 图片预览 -->
+                            <div class="upload-img-box" style="display: none">
+                                <div class="upload-pre-item">
+                                    <img src="">
+                                </div>
+                            </div>
                         </td>
+
                     </tr>
                     <tr>
                         <td class="label">排序：</td>
@@ -59,4 +66,34 @@
             </form>
         </div>
     </div>
+</block>
+<block name="js">
+    <script type="text/javascript" src="__UPLOADIFY__jquery.uploadify.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+
+            $("#logo_uploader").uploadify({
+                'width'         : 146,
+                'height'        : 22,
+                'buttonText'    : '上传图片',                        //指定按钮上面的文字
+                'debug'         : true,                             //是否调试
+                'fileSizeLimit' : '1MB',                            //最大上传大小
+                'fileTypeExts'  : '*.gif; *.jpg; *.png',            //允许上传的文件
+                'swf'           : "__UPLOADIFY__uploadify.swf",
+                'uploader'      : "{:U('Upload/index')}",
+//                'formData'      : {'dir':'Brand'},             //上传本地文件时额外传递过去的参数---->告知服务器上的IndexController中的index方法将来将文件上传到哪个文件夹下
+                'formData'      : {'dir':'nalan'},             //上传文件时额外传递过去的参数---->告知服务器上的IndexController中的index方法将来将文件上传到哪个文件夹下
+                'onUploadSuccess' : function(file, data, response){  //data就是响应的 上传成功后的地址
+                    var path = data.substring(0,data.indexOf('<div'));
+                    //上传成功后，将图片预览，并将保存地址保存到表单中提交
+                    $('.upload-img-box').show(); //显示出div
+                    $('.upload-img-box .upload-pre-item img').attr('src','__BRAND__'+path);
+                    $('.logo').val(path);  //将上传后的路径同时也放到隐藏域中.. 一起提交给服务器.
+                },
+                'onUploadError' : function(file, errorCode, errorMsg, errorString) {
+                    alert('The file ' + file.name + ' could not be uploaded: ' + errorString);
+                }
+            });
+        });
+    </script>
 </block>

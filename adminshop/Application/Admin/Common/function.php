@@ -20,3 +20,15 @@ function error_msg($model)
     //返回错误信息
     return $errorMsg;
 }
+
+if(function_exists('array_column')){
+    return;
+}else{
+    function array_column($array,$key){
+        $arr = [];
+        foreach($array as $value){
+            $arr[] = $value[$key];
+        }
+        return $arr;
+    }
+}

@@ -30,18 +30,22 @@
     </form>
 </div>
 </block>
-
-<div class="list-div" id="listDiv">
+<block name="list_manager">
+<div class="list-div">
     <input type="button"  url="{:U('changeStatus')}" class="ajax_post button" value="删除"/>
     <input type="button"  url="{:U('changeStatus',array('status'=>1))}" class="ajax_post button" value="显示"/>
     <input type="button"  url="{:U('changeStatus',array('status'=>0))}" class="ajax_post button" value="隐藏"/>
+
+</div>
+</block>
+
+<div class="list-div" id="listDiv">
     <block name="list"></block>
-    <div id="turn-page" class="page">
-        {$pageshow}
-    </div>
 </div>
 
-
+<div id="turn-page" class="page">
+    {$pageshow}
+</div>
 <div id="footer">
     共执行 3 个查询，用时 0.021251 秒，Gzip 已禁用，内存占用 2.194 MB<br />
     版权所有 &copy; 2005-2012 上海商派网络科技有限公司，并保留所有权利。

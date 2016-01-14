@@ -13,6 +13,6 @@ use Think\Controller;
 
 class SupplierController extends  BaseController
 {
-    protected $meta_title = '供应商';
+    protected $meta_title = '商品供应商';
 
 }

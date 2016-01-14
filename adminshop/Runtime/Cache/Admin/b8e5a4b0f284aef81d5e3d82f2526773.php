@@ -31,10 +31,15 @@
 </div>
 
 
-<div class="list-div" id="listDiv">
+<div class="list-div">
     <input type="button"  url="<?php echo U('changeStatus');?>" class="ajax_post button" value="删除"/>
     <input type="button"  url="<?php echo U('changeStatus',array('status'=>1));?>" class="ajax_post button" value="显示"/>
     <input type="button"  url="<?php echo U('changeStatus',array('status'=>0));?>" class="ajax_post button" value="隐藏"/>
+
+</div>
+
+
+<div class="list-div" id="listDiv">
     
     <table cellpadding="3" cellspacing="1">
         <tr>
@@ -51,7 +56,10 @@
                 <td><?php echo ($row["id"]); ?><input type="checkbox" class="ids" /></td>
                 <td class="first-cell"><?php echo ($row["name"]); ?></td>
                 <td><?php echo ($row["url"]); ?></td>
-                <td><?php echo ($row["logo"]); ?></td>
+                <!-- 大图 -->
+                <!--<td><img width="50px"  src="http://nalan.b0.upaiyun.com/<?php echo ($row["logo"]); ?>"></td>-->
+                <!-- Upyun处理好的缩略图 -->
+                <td><img width="50px"  src="http://nalan.b0.upaiyun.com/<?php echo ($row["logo"]); ?>!brandsmall"></td>
                 <td><?php echo ($row["intro"]); ?></td>
                 <td><?php echo ($row["sort"]); ?></td>
                 <td><a class="ajax_get" href="<?php echo U('changeStatus',array('id'=>$row['id'],'status'=>1-$row['status']));?>"><img src="http://www.adminshop.com/Public/Admin/images/<?php echo ($row["status"]); ?>.gif"/></a></td>
@@ -62,12 +70,11 @@
             </tr><?php endforeach; endif; else: echo "" ;endif; ?>
     </table>
 
-    <div id="turn-page" class="page">
-        <?php echo ($pageshow); ?>
-    </div>
 </div>
 
-
+<div id="turn-page" class="page">
+    <?php echo ($pageshow); ?>
+</div>
 <div id="footer">
     共执行 3 个查询，用时 0.021251 秒，Gzip 已禁用，内存占用 2.194 MB<br />
     版权所有 &copy; 2005-2012 上海商派网络科技有限公司，并保留所有权利。

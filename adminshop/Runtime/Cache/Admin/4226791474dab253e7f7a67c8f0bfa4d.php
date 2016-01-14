@@ -5,6 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link href="http://www.adminshop.com/Public/Admin/css/general.css" rel="stylesheet" type="text/css" />
     <link href="http://www.adminshop.com/Public/Admin/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="http://www.adminshop.com/Public/Admin/css/common.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="http://www.adminshop.com/Public/Admin/js/jquery-1.11.2.js"></script>
     <script type="text/javascript" src="http://www.adminshop.com/Public/Admin/js/common.js"></script>
     <script type="text/javascript" src="http://www.adminshop.com/Public/Admin/layer/layer.js"></script>

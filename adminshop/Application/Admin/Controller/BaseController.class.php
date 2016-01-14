@@ -30,9 +30,9 @@ class BaseController extends Controller
             $wheres['name'] = array('like', "{$kwd}%");
         }
         $rowsMsg = $this->model->getList($wheres);
-
-        $this->assign('meta_title', '商品' . $this->meta_title);
+        $this->assign('meta_title', $this->meta_title);
         $this->assign($rowsMsg);
+
         cookie('_forword_', $_SERVER['REQUEST_URI']);
         $this->display();
     }
@@ -63,7 +63,8 @@ class BaseController extends Controller
             //根据是否有id来确定是添加还是编辑
             if (I('get.id')) {   //编辑
                 //保存当前页面地址
-                $this->assign('meta_title', '编辑' . $this->meta_title);
+                $this->assign('meta', '编辑' );
+                $this->assign('meta_title', $this->meta_title);
                 //默认查询条件
                 $wheres = [
                     'status' => array('gt', -1),
@@ -71,13 +72,16 @@ class BaseController extends Controller
                 //查询回显
                 $row = $this->model->where($wheres)->getById(I('get.id'));
                 $this->assign($row);
-                $this->display();
             } else {   //添加
-                $this->assign('meta_title', '添加' . $this->meta_title);
-                $this->display();
+                $this->assign('meta', '添加');
+                $this->assign('meta_title', $this->meta_title);
             }
+            $this->_view_before();
+            $this->display();
         }
     }
+    //该方法用于子类补充内容
+    protected function _view_before(){}
     //改变状态===》》显示，不显示.删除就是改变status的状态，
     public function changeStatus($id, $status = -1)
     {

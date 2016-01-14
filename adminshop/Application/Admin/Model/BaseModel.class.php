@@ -42,7 +42,7 @@ class BaseModel extends Model
     public function changeStatus($id, $status)
     {
         $data = [
-            'STATUS' => $status,
+            'status' => $status,
             'id' => array('in', $id)
         ];
         //根据status的值判断是删除还是修改

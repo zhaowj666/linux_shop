@@ -4,23 +4,23 @@
         <tr>
             <th>ID<input type="checkbox" class="selectAll" /></th>
             <th>供应商名称</th>
-            <th>联系人</th>
-            <th>联系电话</th>
-            <th>供应商描述</th>
-            <th>排序</th>
-            <th>是否显示</th>
+<th>联系人</th>
+<th>联系电话</th>
+<th>排序</th>
+<th>供应商简介</th>
+<th>是否显示</th>
             <th>操作</th>
         </tr>
         <volist name="rows" id="row">
             <tr align="center">
-                <td>{$row.id}<input type="checkbox" name="id[]" class="ids" value="{$row.id}"/></td>
-                <td class="first-cell">{$row.name}</td>
-                <td>{$row.linkman}</td>
-                <td>{$row.phonenumber}</td>
-                <td>{$row.intro}</td>
-                <td>{$row.sort}</td>
-                <td><a class="ajax_get" href="{:U('changeStatus',array('id'=>$row['id'],'status'=>1-$row['status']))}"><img src="__IMG__{$row.status}.gif"/></a></td>
                 <td>
+                    {$row.id}<input type="checkbox" name="id[]" class="ids" value="{$row.id}"/>
+                </td>
+                <td class='first-cell'>{$row.name}</td><td>{$row.linkman}</td>
+<td>{$row.phonenumber}</td>
+<td>{$row.sort}</td>
+<td>{$row.intro}</td>
+<td><a class="ajax_get"   href="{:U('changeStatus',array('id'=>$row['id'],'status'=>(1-$row['status'])))}"><img src="__IMG__{$row.status}.gif"/></a></td>                <td>
                     <a href="{:U('addEdit',array('id'=>$row['id']))}" title="编辑">编辑</a> |
                     <a class="ajax_get" href="{:U('changeStatus',array('id'=>$row['id']))}" title="移除">移除</a>
                 </td>

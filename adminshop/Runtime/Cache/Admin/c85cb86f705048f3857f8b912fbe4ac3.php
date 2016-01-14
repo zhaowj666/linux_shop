@@ -1,10 +1,11 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>ECSHOP 管理中心 - <?php echo ($meta_title); ?> </title>
+    <title>ECSHOP 管理中心 - <?php echo ($meta); echo ($meta_title); ?> </title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link href="http://www.adminshop.com/Public/Admin/css/general.css" rel="stylesheet" type="text/css" />
     <link href="http://www.adminshop.com/Public/Admin/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="http://www.adminshop.com/Public/Admin/css/common.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="http://www.adminshop.com/Public/Admin/js/jquery-1.11.2.js"></script>
     <script type="text/javascript" src="http://www.adminshop.com/Public/Admin/js/common.js"></script>
     <script type="text/javascript" src="http://www.adminshop.com/Public/Admin/layer/layer.js"></script>
@@ -14,10 +15,10 @@
 </head>
 <body>
 <h1>
-    <span class="action-span"><a href="<?php echo U('index');?>">商品品牌</a>
+    <span class="action-span"><a href="<?php echo U('index');?>"><?php echo ($meta_title); ?></a>
     </span>
     <span class="action-span1"><a href="<?php echo U('Index/main');?>">ECSHOP 管理中心</a></span>
-    <span id="search_id" class="action-span1"> - <?php echo ($meta_title); ?> </span>
+    <span id="search_id" class="action-span1"> - <?php echo ($meta); echo ($meta_title); ?> </span>
     <div style="clear:both"></div>
 </h1>
 
@@ -31,48 +32,37 @@
         <div id="tabbody-div">
             <form enctype="multipart/form-data" name="supplierForm" action="<?php echo U('addEdit');?>" method="POST">
                 <table width="90%" id="general-table" align="center">
-
-                    <tr>
-                        <td class="label">供应商名称：</td>
-                        <td>
-                            <input type="text" name="NAME" value="<?php echo ($name); ?>"/>
-                            <span class="require-field">*</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="label">联系人：</td>
-                        <td>
-                            <input type="text" name="linkman" value="<?php echo ($linkman); ?>"/>
-                            <span class="require-field">*</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="label">联系电话：</td>
-                        <td>
-                            <input type="text" name="phonenumber" value="<?php echo ($phonenumber); ?>"/>
-                            <span class="require-field">*</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="label">排序：</td>
-                        <td>
-                            <input type="text" name="sort" value="<?php echo ((isset($sort) && ($sort !== ""))?($sort):20); ?>"/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="label">是否显示：</td>
-                        <td>
-                            <input type="radio" class="status" name="STATUS" value="1"/>是
-                            <input type="radio" class="status" name="STATUS" value="0"/>否
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="label">供应商简介：</td>
-                        <td>
-                            <textarea name="intro" cols="40" rows="3"><?php echo ($intro); ?></textarea>
-                        </td>
-                    </tr>
-                </table>
+                                            <tr>
+                            <td class="label">供应商名称：</td>
+                            <td>
+                                <input type='text' name='name' value=''/>                            </td>
+                        </tr>
+                                            <tr>
+                            <td class="label">联系人：</td>
+                            <td>
+                                <input type='text' name='linkman' value=''/>                            </td>
+                        </tr>
+                                            <tr>
+                            <td class="label">联系电话：</td>
+                            <td>
+                                <input type='text' name='phonenumber' value=''/>                            </td>
+                        </tr>
+                                            <tr>
+                            <td class="label">排序：</td>
+                            <td>
+                                <input type="text" name="sort" value="<?php echo ((isset($sort) && ($sort !== ""))?($sort):20); ?>"/>                            </td>
+                        </tr>
+                                            <tr>
+                            <td class="label">供应商简介：</td>
+                            <td>
+                                <textarea name='intro' cols='40' rows='3'><?php echo ($intro); ?></textarea>                            </td>
+                        </tr>
+                                            <tr>
+                            <td class="label">是否显示：</td>
+                            <td>
+                                <input type='radio' class='status' name='status' value='1'/>是<input type='radio' class='status' name='status' value='0'/>否                            </td>
+                        </tr>
+                                    </table>
                 <div class="button-div">
                     <input type="submit" value=" 确定 " class="button ajax_post"/>
                     <input type="reset" value=" 重置 " class="button" />

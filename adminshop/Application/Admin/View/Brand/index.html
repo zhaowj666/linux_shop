@@ -16,7 +16,10 @@
                 <td>{$row.id}<input type="checkbox" class="ids" /></td>
                 <td class="first-cell">{$row.name}</td>
                 <td>{$row.url}</td>
-                <td>{$row.logo}</td>
+                <!-- 大图 -->
+                <!--<td><img width="50px"  src="__BRAND__{$row.logo}"></td>-->
+                <!-- Upyun处理好的缩略图 -->
+                <td><img width="50px"  src="__BRAND__{$row.logo}!brandsmall"></td>
                 <td>{$row.intro}</td>
                 <td>{$row.sort}</td>
                 <td><a class="ajax_get" href="{:U('changeStatus',array('id'=>$row['id'],'status'=>1-$row['status']))}"><img src="__IMG__{$row.status}.gif"/></a></td>
